@@ -1,3 +1,8 @@
+/*
+ * @Date: 2020-02-14 16:29:00
+ * @LastEditors  : BeckoninGshy
+ * @LastEditTime : 2020-02-14 18:33:01
+ */
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -36,6 +41,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'styles': resolve('src/assets/styles'),
     }
   },
   module: {

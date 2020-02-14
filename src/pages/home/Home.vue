@@ -1,16 +1,19 @@
 <!--
  * @Date: 2020-02-14 17:08:12
  * @LastEditors  : BeckoninGshy
- * @LastEditTime : 2020-02-14 17:15:26
+ * @LastEditTime : 2020-02-14 17:48:15
  -->
 <template>
-    <div> home </div>
+    <home-header></home-header>
 </template>
 
 <script>
+import HomeHeader from './components/Header'
 export default {
-  name: 'Home'
-
+  name: 'Home',
+  components: {
+    HomeHeader
+  }
 }
 </script>
 
