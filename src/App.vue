@@ -1,6 +1,11 @@
+<!--
+ * @Date: 2020-02-14 16:29:00
+ * @LastEditors  : BeckoninGshy
+ * @LastEditTime : 2020-02-14 17:16:11
+ -->
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- 显示当前路由地址所对应的内容/ -->
     <router-view/>
   </div>
 </template>
