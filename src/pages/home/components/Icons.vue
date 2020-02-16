@@ -92,38 +92,40 @@ export default {
 <style lang="stylus" scoped>
   @import "~styles/varibles.styl"
   @import "~styles/mixins.styl"
-  .icons
-    overflow hidden
-    height 0
-    padding-bottom 50%
-    .icon
-      position relative
+  .content
+    margin-top .1rem
+    .icons
       overflow hidden
-      float left
-      width 25%
       height 0
-      padding-bottom 25%
-      .icon-content
-        position absolute
-        left 0
-        top 0
-        right 0
-        bottom .44rem
-        box-sizing border-box
-        padding .1rem
-        width 100%
-        .icon-img
-          display block
-          margin 0 auto
-          height 100%
-      .icon-desc
-        position absolute
-        left 0
-        bottom 0
-        right 0
-        height .44rem
-        line-height .44rem
-        color $darkTextColor
-        text-align center
-        ellipsis()
+      padding-bottom 50%
+      .icon
+        position relative
+        overflow hidden
+        float left
+        width 25%
+        height 0
+        padding-bottom 25%
+        .icon-content
+          position absolute
+          left 0
+          top 0
+          right 0
+          bottom .44rem
+          box-sizing border-box
+          padding .1rem
+          width 100%
+          .icon-img
+            display block
+            margin 0 auto
+            height 100%
+        .icon-desc
+          position absolute
+          left 0
+          bottom 0
+          right 0
+          height .44rem
+          line-height .44rem
+          color $darkTextColor
+          text-align center
+          ellipsis()
 </style>

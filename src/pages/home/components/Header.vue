@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-02-14 17:08:12
- * @LastEditors  : BeckoninGshy
+ * @LastEditors: BeckoninGshy
  * @LastEditTime : 2020-02-14 18:34:42
  -->
 <template>
@@ -43,7 +43,7 @@ export default {
       flex: 1
       height: .64rem
       line-height: .64rem
-      margin-top: .12rem
+      margin-top: .11rem
       margin-left: .2rem
       padding-left: .2rem
       background-color: #fff
