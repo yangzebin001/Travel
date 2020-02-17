@@ -10,7 +10,7 @@
     </div>
     <ul>
       <li class="item border-bottom"
-        v-for="it in recommendList"
+        v-for="it in list"
         :key="it.id"
       >
         <img class="item-img" :src="it.imgUrl">
@@ -27,30 +27,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/45/459bd3d00321a44790.water.jpg_200x200_6cd905a1.jpg',
-        title: '京城欢京撒欢末撒欢',
-        desc: '在帝都过周末，不仅仅是城中游！'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p48/201211/09/b42748a870a4931a93835fbb.jpg_200x200_4c2fed17.jpg',
-        title: '水上世界',
-        desc: '在帝都过周末，不仅仅是城中游！'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/45/459bd3d00321a44790.water.jpg_200x200_6cd905a1.jpg',
-        title: '京城欢京撒欢末撒欢末撒欢',
-        desc: '在帝都过周末，不仅仅是城中游！'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p48/201211/09/b42748a870a4931a93835fbb.jpg_200x200_4c2fed17.jpg',
-        title: '水上世界',
-        desc: '在帝都过周末，不仅仅是城中游！'
-      }]
-    }
+    return { }
   }
 }
 </script>
