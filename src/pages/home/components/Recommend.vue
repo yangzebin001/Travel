@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scope>
+<style lang="stylus" scoped>
   @import "~styles/mixins.styl"
   .recommend-title
     margin-top: .2rem
