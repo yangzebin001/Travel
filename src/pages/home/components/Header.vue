@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-02-14 17:08:12
  * @LastEditors: BeckoninGshy
- * @LastEditTime : 2020-02-14 18:34:42
+ * @LastEditTime: 2020-02-18 18:08:12
  -->
 <template>
     <div class="header">
@@ -22,7 +22,6 @@
 <script>
 export default {
   name: 'HomeHeader'
-
 }
 </script>
 
