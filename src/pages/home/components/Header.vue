@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-02-14 17:08:12
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-18 18:28:18
+ * @LastEditTime: 2020-02-18 18:42:20
  -->
 <template>
     <div class="header">
@@ -45,8 +45,8 @@ export default {
         font-size .4rem
     .header-input
       flex 1
-      height .64rem
-      line-height .64rem
+      height $inputHeight
+      line-height $inputHeight
       margin-top .11rem
       margin-left .2rem
       padding-left .2rem
