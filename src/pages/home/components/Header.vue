@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-02-14 17:08:12
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-18 18:08:12
+ * @LastEditTime: 2020-02-18 18:13:38
  -->
 <template>
     <div class="header">
@@ -13,7 +13,7 @@
         输入城市/游玩/主题
       </div>
       <div class="header-right">
-        城市
+        {{this.city}}
         <span class="iconfont arrow-icon">&#xe623;</span>
       </div>
     </div>
@@ -21,7 +21,10 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
