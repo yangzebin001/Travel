@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-02-18 18:49:32
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-19 19:54:47
+ * @LastEditTime: 2020-02-19 20:51:44
  -->
 <template>
   <div class="list" ref="wrapper">
@@ -32,6 +32,7 @@
       <div class="area"
         v-for="(item, key) of cities"
         :key="key"
+        :ref="key"
       >
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
@@ -51,10 +52,20 @@ export default {
   name: 'CityList',
   props: {
     cities: Object,
-    hotCities: Array
+    hotCities: Array,
+    letter: String
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  // 监听letter属性的值。改变后将页面滚动到相应位置
+  watch: {
+    letter () {
+      if (this.letter) {
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>

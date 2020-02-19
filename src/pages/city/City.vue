@@ -1,14 +1,22 @@
 <!--
  * @Date: 2020-02-18 18:02:57
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-19 19:56:13
+ * @LastEditTime: 2020-02-19 20:52:09
  -->
 <template>
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hotCities="hotCities" ></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <!-- 将letter随时传给list组件 -->
+    <city-list
+      :cities="cities"
+      :hotCities="hotCities"
+      :letter="letter"
+      ></city-list>
+    <city-alphabet
+      :cities="cities"
+      @change="handleAlphabetChange"
+    ></city-alphabet>
   </div>
 </template>
 
@@ -29,7 +37,8 @@ export default {
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   methods: {
@@ -44,6 +53,10 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
+    },
+    // 为alphabet到list组件传递letter做一个桥梁
+    handleAlphabetChange (letter) {
+      this.letter = letter
     }
   },
   mounted () {
