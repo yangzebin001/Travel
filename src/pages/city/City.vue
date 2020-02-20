@@ -1,12 +1,12 @@
 <!--
  * @Date: 2020-02-18 18:02:57
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-19 19:56:13
+ * @LastEditTime: 2020-02-20 18:24:22
  -->
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :cities="cities"></city-search>
     <city-list :cities="cities" :hotCities="hotCities" ></city-list>
     <city-alphabet :cities="cities"></city-alphabet>
   </div>
