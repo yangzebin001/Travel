@@ -1,12 +1,15 @@
 <!--
  * @Date: 2020-02-14 16:29:00
- * @LastEditors  : BeckoninGshy
- * @LastEditTime : 2020-02-14 17:50:02
+ * @LastEditors: BeckoninGshy
+ * @LastEditTime: 2020-02-20 21:06:25
  -->
 <template>
   <div id="app">
-    <!-- 显示当前路由地址所对应的内容/ -->
-    <router-view/>
+    <!-- 将加载过的内容放入内存 -->
+    <keep-alive>
+      <!-- 显示当前路由地址所对应的内容/ -->
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
