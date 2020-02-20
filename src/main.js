@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-02-14 16:29:00
  * @LastEditors: BeckoninGshy
- * @LastEditTime : 2020-02-14 18:33:19
+ * @LastEditTime: 2020-02-20 20:24:22
  */
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
@@ -10,6 +10,7 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store/index'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
@@ -23,6 +24,7 @@ fastClick.attach(document.body)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

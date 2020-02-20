@@ -2,7 +2,7 @@
  * @Date: 2020-02-18 18:02:57
  * @LastEditors: BeckoninGshy
 <<<<<<< HEAD
- * @LastEditTime: 2020-02-20 18:43:33
+ * @LastEditTime: 2020-02-20 18:50:26
 =======
  * @LastEditTime: 2020-02-20 18:24:22
 >>>>>>> search-logic
@@ -10,7 +10,7 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :cities="cities"></city-search>
     <!-- 将letter随时传给list组件 -->
     <city-list
       :cities="cities"

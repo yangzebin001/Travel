@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-02-18 18:49:32
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-19 20:51:44
+ * @LastEditTime: 2020-02-20 20:57:53
  -->
 <template>
   <div class="list" ref="wrapper">
@@ -12,7 +12,7 @@
         </div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button"> 北京 </div>
+            <div class="button"> {{this.currentCity}} </div>
           </div>
         </div>
       </div>
@@ -24,6 +24,7 @@
           <div class="button-wrapper"
             v-for="item in hotCities"
             :key="item.id"
+            @click="handleCityClick(item.name)"
           >
             <div class="button"> {{item.name}} </div>
           </div>
@@ -39,6 +40,7 @@
           <div class="item border-bottom"
             v-for="innerItem of item"
             :key="innerItem.id"
+            @click="handleCityClick(innerItem.name)"
           >{{innerItem.name}}</div>
         </div>
       </div>
@@ -47,6 +49,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 import Bscroll from 'better-scroll'
 export default {
   name: 'CityList',
@@ -55,8 +58,17 @@ export default {
     hotCities: Array,
     letter: String
   },
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
+  methods: {
+    handleCityClick (city) {
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
+  },
+  computed: {
+    ...mapState({
+      currentCity: 'city'
+    })
   },
   // 监听letter属性的值。改变后将页面滚动到相应位置
   watch: {
@@ -66,6 +78,9 @@ export default {
         this.scroll.scrollToElement(element)
       }
     }
+  },
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
   }
 }
 </script>
