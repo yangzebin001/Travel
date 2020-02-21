@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-02-14 16:29:00
- * @LastEditors  : BeckoninGshy
- * @LastEditTime : 2020-02-14 18:33:01
+ * @LastEditors: BeckoninGshy
+ * @LastEditTime: 2020-02-21 21:08:48
  */
 'use strict'
 const path = require('path')
@@ -42,6 +42,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'styles': resolve('src/assets/styles'),
+      'common': resolve('src/common'),
     }
   },
   module: {

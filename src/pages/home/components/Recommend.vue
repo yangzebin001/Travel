@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-02-16 21:42:53
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-16 21:42:57
+ * @LastEditTime: 2020-02-21 19:59:59
  -->
 <template>
   <div>
@@ -9,9 +9,12 @@
       热销推荐
     </div>
     <ul>
-      <li class="item border-bottom"
+      <router-link
+        class="item border-bottom"
         v-for="it in list"
         :key="it.id"
+        tag="li"
+        :to="'/detail/' + it.id"
       >
         <img class="item-img" :src="it.imgUrl">
         <div class="item-info">
@@ -19,7 +22,7 @@
           <p class="item-desc">{{it.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>

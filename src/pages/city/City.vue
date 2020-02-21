@@ -1,11 +1,7 @@
 <!--
  * @Date: 2020-02-18 18:02:57
  * @LastEditors: BeckoninGshy
-<<<<<<< HEAD
- * @LastEditTime: 2020-02-20 18:50:26
-=======
- * @LastEditTime: 2020-02-20 18:24:22
->>>>>>> search-logic
+ * @LastEditTime: 2020-02-21 20:04:25
  -->
 <template>
   <div>
