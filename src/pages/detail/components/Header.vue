@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-02-21 20:01:10
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-23 19:45:18
+ * @LastEditTime: 2020-02-23 20:12:11
  -->
 <template>
   <div>
@@ -53,6 +53,10 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    // 解绑全局事件
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
