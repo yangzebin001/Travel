@@ -1,19 +1,19 @@
 <!--
  * @Date: 2020-02-21 20:05:10
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-21 21:50:17
+ * @LastEditTime: 2020-02-23 21:00:36
  -->
 <template>
   <div class="banner">
-    <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1702/db/db96bae1c06f0287a3.water.jpg_600x330_6c9b6ccb.jpg" alt=""
+    <img class="banner-img" :src="bannerImg" alt=""
       @click="handleClickGallary"
     >
     <div class="banner-info">
-      <div class="banner-title">三晋奇石博物馆</div>
+      <div class="banner-title">{{sightName}}</div>
       <div class="banner-number"><span class="iconfont banner-icon">&#xe662;</span>39</div>
     </div>
     <common-gallary
-    :imgs="imgs"
+    :imgs="gallaryImgs"
     v-show="showGallary"
     @close="handleClickGallary"
     ></common-gallary>
@@ -23,12 +23,13 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
   data () {
     return {
-      imgs: [
-        'http://img1.qunarzz.com/sight/p0/1909/ab/ab688e418cb65f05a3.water.jpg_r_800x800_0413a836.jpg',
-        'http://img1.qunarzz.com/sight/p0/1909/1c/1c919a0afaecc3aa3.water.jpg_r_800x800_e38647df.jpg'
-      ],
       showGallary: false
     }
   },
