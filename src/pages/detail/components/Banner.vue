@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-02-21 20:05:10
  * @LastEditors: BeckoninGshy
- * @LastEditTime: 2020-02-23 21:00:36
+ * @LastEditTime: 2020-02-23 21:27:18
  -->
 <template>
   <div class="banner">
@@ -12,15 +12,18 @@
       <div class="banner-title">{{sightName}}</div>
       <div class="banner-number"><span class="iconfont banner-icon">&#xe662;</span>39</div>
     </div>
-    <common-gallary
-    :imgs="gallaryImgs"
-    v-show="showGallary"
-    @close="handleClickGallary"
-    ></common-gallary>
+    <fade-animation>
+      <common-gallary
+      :imgs="gallaryImgs"
+      v-show="showGallary"
+      @close="handleClickGallary"
+      ></common-gallary>
+    </fade-animation>
   </div>
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fadeAnimation/Fade'
 export default {
   name: 'DetailBanner',
   props: {
@@ -40,7 +43,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   }
 }
 </script>
